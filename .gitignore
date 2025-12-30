@@ -1,0 +1,21 @@
+# Created by venv; see https://docs.python.org/3/library/venv.html
+
+# Python 虚拟环境
+venv/
+.env
+.env.local
+.env*.local
+*.log
+
+# Python 编译文件和缓存
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 编辑器设置
+.vscode/
+.idea/
+
+# 系统文件
+.DS_Store
+Thumbs.db
