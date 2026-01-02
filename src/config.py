@@ -1,11 +1,11 @@
 import os
 from pathlib import Path
+from dotenv import load_dotenv
 
 class Config:
     def __init__(self):
         # print("1.config类开始初始化")
-        from dotenv import load_dotenv
-
+        
     #.env文件路径
         env_path = Path(__file__).parent.parent / ".env"
         # print(f"2.尝试从{env_path}加载配置")
@@ -20,6 +20,8 @@ class Config:
         self.api_key = os.getenv("QWEATHER_API_KEY")
         print(f"3.读取到的api密钥：{self.api_key}")
         # print(self)
+        self.weather_url = os.getenv("QWEATHER_API_HOST")
+        print(f"4.读取到的URL：{self.weather_url}")
 
 config = Config()
 # print(f"4.config属性是：{config}")
