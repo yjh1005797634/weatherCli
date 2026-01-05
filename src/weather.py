@@ -8,7 +8,9 @@ class WeatherClient:
         self.api_client = WeatherAPIClient()
     
     def get_city_info(self,location):
+        print("我是智能体第四执行")
         print("5")
+        print(f"J:{location}")
         try:
             data = self.api_client.get_city_id(location)
             #业务逻辑：验证api返回
@@ -25,10 +27,14 @@ class WeatherClient:
             raise Exception(f"获取城市信息失败：{e}")
 
     def get_weather(self,location):
+        print("我是智能体第三执行")
+        print(f"I:{location}")
         print("4")
         try:
             city_info = self.get_city_info(location)
+            print(f"K:{city_info}")
             city_id = city_info["id"]
+            
             print("第几次调用？")
             data = self.api_client.get_current_weather(city_id)
 

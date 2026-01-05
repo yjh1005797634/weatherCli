@@ -22,6 +22,8 @@ class Config:
         # print(self)
         self.weather_url = os.getenv("QWEATHER_API_HOST")
         print(f"4.读取到的URL：{self.weather_url}")
+        self.deepseek_api_key = os.getenv("DEEPSEEK_API_KEY")
+        print(f"读取deeps密钥：{self.deepseek_api_key}")
 
 config = Config()
 # print(f"4.config属性是：{config}")
